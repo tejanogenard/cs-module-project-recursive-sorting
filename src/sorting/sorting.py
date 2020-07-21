@@ -24,6 +24,7 @@ def merge_sort(arr):
     # recursively call merge_sort() on LHS
     # recursively call merge_sort() on RHS
     # merge sorted pieces
+        # arr1 = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
     if len(arr)>1: 
         m = len(arr)//2
         left = arr[:m] 
@@ -37,21 +38,26 @@ def merge_sort(arr):
             if left[0]<right[0]: 
                 arr.append(left[0]) 
                 left.pop(0) 
+                print(left, "left")
+                print()
+                
             else: 
                 arr.append(right[0]) 
                 right.pop(0) 
+                print(right, "right")
+                print()
 
 
-    #append 
         for i in left: 
             arr.append(i) 
         for i in right: 
             arr.append(i) 
+        
+        print(arr)
                   
     return arr 
 
 
-    return arr
 
 # STRETCH: implement the recursive logic for merge sort in a way that doesn't 
 # utilize any extra memory
